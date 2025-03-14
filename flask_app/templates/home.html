@@ -1,0 +1,25 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+<!-- Main Content -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div class="row">
+      <div class="leftColumn">
+          <img src="/static/main/images/noahphoto.jpg" alt="Noah's Photo" class="imgCenterM" loading="lazy">
+      </div>
+      <div class="rightColumn">
+          <p class="textCenter">Noah Gaw</p>
+          <p class="textCenter">Computer Science Student</p>
+          <p class="textCenter">I am a computer science student at Michigan State University, I'm from the metro detroit area and I can't
+              wait to graduate and start working in the field!
+          </p>
+      </div>
+  </div>
+<!-- Another block of content -->
+<hr>
+
+<p>A fun fact about me: <b>{{fun_fact}}</b> </p>
+{% endblock %}
+
+

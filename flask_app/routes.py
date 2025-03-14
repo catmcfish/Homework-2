@@ -81,10 +81,8 @@ def process_feedback():
         try:
             query = "INSERT INTO feedback (name, email, comment) VALUES (%s, %s, %s)"
             db.query(query, [name, email, comment])
-            flash('Thank you for your feedback!', 'success')
         except Exception as e:
             logger.error(f"Database error in feedback insertion: {e}", exc_info=True)
-            flash('Unable to submit feedback at this time. Error: ' + str(e), 'error')
             return redirect(url_for('home'))
 
         return redirect(url_for('view_feedback'))

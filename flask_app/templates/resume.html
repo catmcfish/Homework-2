@@ -11,15 +11,15 @@
         <div class="institution-header">
             <div class="institution-name">{{ institution.name }}</div>
             <div class="institution-info">
-                {% if institution.department != 'NULL' %}
+                {% if institution.department != None %}
                     {{ institution.department }}<br>
                 {% endif %}
-                {% if institution.address != 'NULL' %}
+                {% if institution.address != None %}
                     {{ institution.address }}<br>
                 {% endif %}
-                {% if institution.city != 'NULL' or institution.state != 'NULL' %}
+                {% if institution.city != None or institution.state != None %}
                     {{ institution.city }}, {{ institution.state }}
-                    {% if institution.zip != 'NULL' %}
+                    {% if institution.zip != None %}
                         {{ institution.zip }}
                     {% endif %}
                 {% endif %}
@@ -42,20 +42,20 @@
                     {% endif %}
                 </div>
             </div>
-            {% if position.responsibilities != 'NULL' %}
+            {% if position.responsibilities != None %}
                 <div class="position-responsibilities">{{ position.responsibilities }}</div>
             {% endif %}
 
             {% for exp_id, experience in position.experiences.items() %}
             <div class="experience">
                 <div class="experience-name">
-                    {% if experience.hyperlink and experience.hyperlink != 'NULL' %}
+                    {% if experience.hyperlink and experience.hyperlink != None %}
                         <a href="{{ experience.hyperlink }}" target="_blank">{{ experience.name }}</a>
                     {% else %}
                         {{ experience.name }}
                     {% endif %}
                 </div>
-                {% if experience.description != 'NULL' %}
+                {% if experience.description != None %}
                     <div class="experience-description">{{ experience.description }}</div>
                 {% endif %}
 

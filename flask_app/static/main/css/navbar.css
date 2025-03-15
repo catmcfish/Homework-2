@@ -1,5 +1,5 @@
 /* Media query for screens with a max width of 650px */
-@media (max-width: 650px) {
+@media (max-width: 40.625rem) {
     .navbar .links a {
         display: none;  /* Hide navbar links */
     }
@@ -11,9 +11,9 @@
     display: none;
     height: 50%; 
     width: auto;
-    opacity:1;
+    opacity: 1;
     z-index: 5;
-    margin-left:15vw;
+    margin-left: 15vw;
 }
 
 /* Styles for the navbar */
@@ -21,13 +21,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #333333;
     overflow: visible;
-    padding: 0vh;
+    padding: 0;
     height: 10vh;
     position: sticky;
     top: 3vh;
-    box-shadow: 1em 1em 1em 1em rgba(0, 0, 0, 0.4);
+    box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.4);
     z-index: 2;
 }
 
@@ -36,11 +36,11 @@
     color: #f2f2f2;
     font-size: 3vw;
     display: flex;
-    justify-content: justify;
+    justify-content: center;
     align-items: center;
-    background-color: #333;
+    background-color: #333333;
     overflow: visible;
-    padding: 0vh;
+    padding: 0;
     height: 10vh;
     position: absolute;
     left: 50%;
@@ -56,6 +56,8 @@
     box-shadow: none;
     text-align: right;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* Styles for the links in the navbar */
@@ -65,9 +67,9 @@
     text-align: center;
     text-justify: justify;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin-left: auto;
-    margin-right: 1em;
+    margin-right: 1rem;
     box-shadow: none;
     opacity: 1;
 }
@@ -87,7 +89,7 @@
 
 /* Hover effect for the links in the navbar */
 .navbar .links a:hover {
-    background-color: black;
+    background-color: #000000;
     color: #ff0000;
     transition: 0.75s;
     opacity: 0.5;
@@ -99,12 +101,12 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: #333;
+    background-color: #333333;
     width: 10vw;
     height: 100vh;
     position: fixed;
-    padding: 1em;
-    box-shadow: 2vw rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    box-shadow: 0.125rem 0.125rem 0.5rem rgba(0, 0, 0, 0.4);
     z-index: 2;
 }
 
@@ -114,19 +116,22 @@
     flex-direction: column;
     width: 100%;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* Styles for the links in the vertical navbar */
 .verticalNavbar .links a {
-    display: fixed;
+    display: block;
     color: #f2f2f2;
     text-align: left;
     text-decoration: none;
     margin-left: -4vw;
-    padding: 0%;
+    padding: 0.5rem 0;
     width: 90%;
     box-shadow: none;
     opacity: 1;
+    transition: background-color 0.75s, color 0.75s, opacity 0.75s;
 }
 
 /* Hover effect for the links in the vertical navbar */

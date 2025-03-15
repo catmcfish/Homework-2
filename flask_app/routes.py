@@ -21,9 +21,9 @@ def root():
 @app.route('/home')
 def home():
     try:
-        x = random.choice(['I started university when I was a wee lad of 15 years.',
-                          'I have a pet sparrow.',
-                          'I write poetry.'])
+        x = random.choice(['Ive been tinkering with computers since I was 8 years old',
+        'I love the winter so much more than the summer.',
+        'Ive been working since I was 16 years old.'])
         return render_template('home.html', fun_fact=x)
     except Exception as e:
         print(f"Error in home route: {e}")
@@ -34,12 +34,10 @@ def resume():
     try:
         resume_data = db.getResumeData()
         if not resume_data:
-            flash('Unable to load resume data at this time.', 'error')
             return render_template('resume.html', resume_data={})
         return render_template('resume.html', resume_data=resume_data)
     except Exception as e:
         print(f"Error in resume route: {e}")
-        flash('An error occurred while loading the resume.', 'error')
         return render_template('resume.html', resume_data={})
 
 @app.route('/feedback')
